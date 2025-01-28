@@ -1,0 +1,155 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins.scss' as *;
+@use "sass:map";
+
+.home-page {
+  padding: 16px;
+  margin-top: 40px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+
+    .profile-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $offwhite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+      }
+
+      .placeholder {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $offwhite;
+      }
+    }
+
+    .search-bar__container {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 56px);
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: $white;
+      border-radius: 4px;
+      padding: 4px 8px 4px 8px;
+      height: 40px;
+      border: 1px solid $tan;
+      overflow: hidden;
+      width: 100%;
+
+      .search-input {
+        flex-grow: 1;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 14px;
+      }
+    }
+
+    .search-icon {
+      width: 41px;
+      height: 41px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $jade;
+    }
+  }
+
+  .section {
+    margin-bottom: 24px;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .scroll-container {
+      max-height: 350px;
+      overflow-y: auto;
+      padding: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: rgba(245, 245, 245, 0.8);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-card {
+      width: 100%;
+      border: 1px solid $tan;
+      border-radius: 4px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background-color: rgba(#EFEFE9, 0.6);
+
+      .post-card-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        color: $graygreen;
+
+        .post-card-user {
+          font-weight: bold;
+          color: $graygreen;
+        }
+
+        .post-card-dates {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          font-size: 12px;
+
+          .post-card-label {
+            font-weight: bold;
+            color: $tan;
+          }
+
+          .post-card-created,
+          .post-card-duedate {
+            color: $graygreen;
+          }
+        }
+      }
+
+      .post-card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .post-card-title {
+          font-size: 16px;
+          font-weight: bold;
+          color: $mossgreen;
+        }
+
+        .post-card-description {
+          font-size: 14px;
+          color: $graygreen;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins.scss' as *;
+@use "sass:map";
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: $offwhite;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid $tan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  
+}
+.close-icon{
+  font-weight:bold;
+  color:$tan;
+}
+
+.hero-section {
+  margin-bottom: 20px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.post-description {
+  margin-bottom: 20px;
+}
+
+.due-date-section {
+  margin-bottom: 20px;
+}
+
+.accept-button, .edit-button, .delete-button, .decline-button, .dismiss-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid tan;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight:bold;
+}
+
+.accept-button {
+  background-color: $mossgreen;
+  color: $white;
+}
+
+.edit-button {
+  background-color: $mossgreen;
+  color: $white;
+}
+
+.delete-button {
+  background-color: $beige;
+}
+
+.decline-button {
+  background-color: $beige;
+}
+
+.dismiss-button {
+  background-color: $white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.input-title {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid $tan;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.textarea-description {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid $tan;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input-date {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid $tan;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: $white;
+  color: $graygreen;
+}

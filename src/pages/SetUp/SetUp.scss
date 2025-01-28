@@ -1,0 +1,149 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins.scss' as *;
+@use "sass:map";
+
+.setup__title{
+    height:40px;
+    display:flex;
+    justify-content:flex-start;
+    width:90%;
+}
+
+.setup__text_container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+    margin-bottom: 8px;
+
+  label {
+    display: flex;
+    align-items:flex-start;
+    margin-bottom: 8px;
+    font-weight: bold;
+    width:100%;
+    margin-top:16px;
+    @include tablet {
+      width: 690px;
+  }
+  }
+
+  .setup__input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid $tan;
+    border-radius: 4px;
+    height: 40px;
+    width:100%;
+    @include tablet {
+      width: 690px;
+    }
+
+}
+  
+}
+
+.setup__image-upload {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    width:90%;
+  
+    .setup__image-circle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      background-color: $offwhite;
+      border-radius: 50%;
+      color: $graygreen;
+      font-size: 24px;
+      cursor: pointer;
+  
+      .setup__image-plus {
+        font-size: 36px;
+        color: $tan;
+      }
+  
+      .setup__image-text {
+        font-size: 14px;
+        margin-top: 5px;
+        font-weight:bold;
+      }
+    }
+  }
+
+
+  .setup__birthday_input {
+    display: flex;
+    align-items: center;
+    width: 100%; // Ensures it occupies the available container width
+    gap: 8px; // Add spacing between the icon and the datepicker
+  
+    @include tablet {
+      width: 690px; // Set specific width for tablet view
+    }
+  
+
+    .setup__calendar_button {
+      background-color: $tan;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width:40px;
+  
+    }
+
+    .react-datepicker-wrapper {
+      flex-grow: 1; // Allows the datepicker to use the remaining space
+      width: auto; // Prevents overriding with unnecessary width
+      border-radius: 5px;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid $tan;
+      border-radius: 4px;
+      height: 40px;
+      & #date-picker{
+        border:none;
+        width:100%;
+      }
+    }
+
+
+  }
+
+  .error-container {
+    border-radius: 4px;
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.2rem;
+    overflow: hidden;
+    font-size: 0.9rem;
+    border: 1px solid $tan;
+    background: $beige;
+    color: $graygreen;
+    transition: opacity 0.2s;
+    width: 100%;
+    height: 40px;
+    @include tablet {
+      width: 690px;
+    }
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }

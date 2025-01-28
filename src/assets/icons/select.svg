@@ -1,0 +1,26 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" fill="white"/>
+<g id="Add Post Modal">
+<g clip-path="url(#clip0_22_400)">
+<rect x="-270" y="-154" width="320" height="568" fill="white"/>
+<path id="Shape" d="M50 -154H-270V11L50 -71.834V-154Z" fill="#A3BCB6" stroke="#A3BCB6"/>
+<g id="My Dashboard tiles">
+<rect id="Rectangle 10" x="-20" y="-58" width="102" height="110" rx="10" fill="#EFEFE9"/>
+</g>
+<g id="Add Task Modal">
+<rect id="Modal background" x="-261.5" y="-125.5" width="303" height="539" rx="9.5" fill="#EFEFE9" stroke="#BBA58F"/>
+<g id="Request Type field">
+<rect id="Rectangle 24" x="-249.5" y="1.18549" width="279.848" height="29.4555" rx="4.5" fill="white" stroke="#BBA58F"/>
+<path id="Button" d="M0.668884 5.68543C0.668884 2.924 2.90746 0.685425 5.66888 0.685425H26.1289C28.8903 0.685425 31.1289 2.924 31.1289 5.68542V26.141C31.1289 28.9024 28.8903 31.141 26.1289 31.141H5.66888C2.90746 31.141 0.668884 28.9024 0.668884 26.141V5.68543Z" fill="#BBA58F"/>
+<path id="&#226;&#140;&#132;" d="M16.5644 20.88L12.6644 13.36H14.2844L16.7644 18.28L19.2444 13.36H20.8644L16.9644 20.88H16.5644Z" fill="white"/>
+</g>
+</g>
+</g>
+<rect x="-269.5" y="-153.5" width="319" height="567" stroke="#3C403D"/>
+</g>
+<defs>
+<clipPath id="clip0_22_400">
+<rect x="-270" y="-154" width="320" height="568" fill="white"/>
+</clipPath>
+</defs>
+</svg>

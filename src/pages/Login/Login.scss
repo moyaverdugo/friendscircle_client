@@ -1,0 +1,143 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins.scss' as *;
+@use "sass:map";
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding-top: 110px; /* Ensures the logo starts from a consistent height */
+  box-sizing: border-box;
+  padding-bottom: 36px;
+}
+
+.logo {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Aligns children vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center;
+  width: 90%;
+}
+
+.login__text_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+
+  label {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    font-weight: bold;
+    width: 100%;
+    @include tablet {
+      width: 690px;
+    }
+  }
+
+  .phone-container {
+    display: flex;
+    align-items: center; /* Vertically aligns the select and input */
+    width: 100%;
+    @include tablet {
+      width: 690px;
+    }
+
+    select {
+      width: 20%;
+      min-width: 50px; /* Ensure it doesn't shrink too much */
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid $tan;
+      border-radius: 4px;
+      text-align: center; /* Center align the text inside the dropdown */
+      height: 40px;
+      background-color: $tan;
+      color: $white;
+    }
+
+    input[type="text"] {
+      flex-grow: 1;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid $tan;
+      border-radius: 4px;
+      height: 40px;
+    }
+  }
+
+  .password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    @include tablet {
+      width: 690px;
+    }
+
+    input {
+      flex-grow: 1;
+      padding-right: 50px;
+      padding-left: 0.5rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid $tan;
+      border-radius: 4px;
+      height: 40px;
+    }
+
+    .toggle-password-btn {
+      display: flex;
+      position: absolute;
+      right: 0px;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      img {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+}
+
+.error-container {
+  border-radius: 4px;
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.2rem; // Adjust as needed
+  overflow: hidden;
+  font-size: 0.9rem;
+  border: 1px solid $tan;
+  background: $beige;
+  color: $graygreen;
+  transition: opacity 0.2s;
+  width: 100%;
+  height: 40px;
+  @include tablet {
+    width: 690px;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+  
+}

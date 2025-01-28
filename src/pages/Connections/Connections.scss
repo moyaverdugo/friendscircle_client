@@ -1,0 +1,72 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins.scss' as *;
+@use "sass:map";
+
+.connections-page {
+  .connections-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .back-button {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $tan;
+      background-color: $offwhite;
+      color: $tan;
+      border-radius: 5px;
+    }
+
+    .add-friend-button {
+      border: 1px solid $tan;
+      background-color: $mossgreen;
+      color: $white;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    padding: 1rem;
+    background-color: $offwhite;
+
+    .user-info {
+      font-size: 1.5rem;
+    }
+
+    .user-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: $tan;
+    }
+  }
+
+  .tabs-card {
+    border: 1px solid $tan;
+    border-radius: 5px;
+    background-color: $offwhite;
+    padding: 1rem;
+
+    .tabs {
+      display: flex;
+      gap: 1rem;
+
+      .tab {
+        border: 1px solid $tan;
+        padding: 0.5rem 1rem;
+        &.selected {
+          background-color: $tan;
+          color: $white;
+        }
+      }
+    }
+
+    .tab-content {
+      margin-top: 1rem;
+    }
+  }
+}
